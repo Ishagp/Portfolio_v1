@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isha Gupta • Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Times New Roman', Times, serif, 'Inter', sans-serif; 
+            color: #000000; 
+            background-color: #f4f4f5; 
+        }
+        .resume-sheet {
+            max-width: 820px;
+            margin: 2rem auto;
+            background: #ffffff;
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.08);
+            padding: 2.8rem 3.2rem;
+            border-radius: 4px;
+            line-height: 1.35;
+        }
+        .section-heading {
+            font-size: 1.05rem;
+            font-weight: 700;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 2px;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        @media print {
+            body { background: white !important; padding: 0 !important; }
+            .resume-sheet { 
+                box-shadow: none !important; 
+                margin: 0 !important; 
+                padding: 1.2rem 1.6rem !important; 
+                max-width: 100% !important; 
+                border-radius: 0 !important; 
+            }
+            .no-print { display: none !important; }
+        }
+    </style>
+</head>
+<body class="py-6 px-4 bg-[#1f242d]">
+    <!-- Top Action Bar (hidden during printing) -->
+    <div class="max-w-[820px] mx-auto mb-4 flex justify-between items-center no-print">
+        <a href="../index.html" class="inline-flex items-center text-sm font-sans font-semibold text-[#0ef] hover:underline transition">
+            &larr; Back to Portfolio
+        </a>
+        <div class="flex gap-3">
+            <button onclick="window.print()" class="px-5 py-2 bg-[#0ef] text-[#1f242d] font-sans text-sm font-bold rounded-full shadow-[0_0_15px_rgba(0,238,255,0.5)] hover:shadow-[0_0_25px_rgba(0,238,255,0.8)] transition flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                Print / Save as PDF
+            </button>
+        </div>
+    </div>
+
+    <!-- ATS Standard Resume Sheet -->
+    <div class="resume-sheet">
+        <!-- Header -->
+        <div class="text-center pb-2">
+            <h1 class="text-2xl font-bold tracking-wider text-black">ISHA GUPTA</h1>
+            <div class="text-sm mt-0.5">Noida, India</div>
+            <div class="text-[13px] flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mt-1 text-slate-900 font-sans">
+                <span class="flex items-center gap-1">&#9742; 8303088220</span>
+                <span class="flex items-center gap-1">&#9993; <a href="mailto:gisha825@gmail.com" class="text-blue-800 hover:underline">gisha825@gmail.com</a></span>
+                <span><a href="https://www.linkedin.com/in/ishagupta25" target="_blank" class="text-blue-800 hover:underline">linkedin.com/in/ishagupta25</a></span>
+                <span><a href="https://github.com/Ishagp" target="_blank" class="text-blue-800 hover:underline">github.com/Ishagp</a></span>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <section>
+            <h2 class="section-heading">Summary</h2>
+            <p class="text-[13px] leading-relaxed text-justify">
+                Computer Science (AI/ML) student with hands on experience in Python, machine learning, and data driven application development. Skilled in building ML prototypes, EDA, and dashboards, with working knowledge of SQL, Git, GitHub, and RDBMS concepts. Passionate about exploring new technologies and translating research into real world solutions.
+            </p>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2 class="section-heading">Education</h2>
+            <div class="mb-2 text-[13px]">
+                <div class="flex justify-between items-baseline font-bold">
+                    <div>JSS Academy of Technical Education</div>
+                    <div>2023 to 2027</div>
+                </div>
+                <div class="flex justify-between items-baseline italic">
+                    <div>B.Tech, Computer Science (AIML) • <span class="font-bold not-italic">8.58/10</span></div>
+                    <div>Noida, India</div>
+                </div>
+            </div>
+
+            <div class="mb-2 text-[13px]">
+                <div class="flex justify-between items-baseline font-bold">
+                    <div>L.N. National Sr. Secondary School (CBSE)</div>
+                    <div>2021 to 2022</div>
+                </div>
+                <div class="flex justify-between items-baseline italic">
+                    <div>Class 12th • <span class="font-bold not-italic">92.80%</span></div>
+                    <div>Sikanderpur, India</div>
+                </div>
+            </div>
+
+            <div class="text-[13px]">
+                <div class="flex justify-between items-baseline font-bold">
+                    <div>L.N. National Sr. Secondary School (CBSE)</div>
+                    <div>2019 to 2020</div>
+                </div>
+                <div class="flex justify-between items-baseline italic">
+                    <div>Class 10th • <span class="font-bold not-italic">93.33%</span></div>
+                    <div>Sikanderpur, India</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section>
+            <h2 class="section-heading">Projects</h2>
+
+            <!-- Project 1 -->
+            <div class="mb-3 text-[13px]">
+                <div class="font-bold">
+                    &bull; <a href="https://heart-disease-prediction-rqlxvdos6v4ajygh2mgyfn.streamlit.app/" target="_blank" class="text-blue-900 hover:underline">Heart Disease Prediction App</a>
+                </div>
+                <ul class="list-disc list-outside ml-5 space-y-0.5 mt-0.5 text-justify">
+                    <li>Developed a Machine Learning based web application to predict heart disease risk using clinical patient data.</li>
+                    <li>Performed data cleaning and exploratory data analysis (EDA) on healthcare dataset; trained models including Logistic Regression and Random Forest achieving <strong>88% accuracy</strong> and <strong>0.94 ROC-AUC score</strong>.</li>
+                    <li>Identified key health indicators such as maximum heart rate, chest pain type, and number of vessels impacting predictions; deployed the model using Streamlit for real time user interaction.</li>
+                </ul>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="mb-3 text-[13px]">
+                <div class="font-bold">
+                    &bull; <a href="https://github.com/Ishagp/Airbnb-PowerBI-Dashboard" target="_blank" class="text-blue-900 hover:underline">Airbnb Analytics Dashboard</a>
+                </div>
+                <ul class="list-disc list-outside ml-5 space-y-0.5 mt-0.5 text-justify">
+                    <li>Built an interactive Power BI dashboard to analyze Airbnb listings, hosts, reviews, pricing trends, and city wise performance.</li>
+                    <li>Performed data cleaning and transformation using Power Query and created KPIs, visual reports, and business insights using DAX.</li>
+                    <li>Analyzed market share, ratings, review trends, seasonality, and host trust metrics to support data driven decision making.</li>
+                </ul>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="mb-1 text-[13px]">
+                <div class="font-bold">
+                    &bull; <a href="https://habit-tracker-puce-chi.vercel.app/" target="_blank" class="text-blue-900 hover:underline">Habit Tracker App</a>
+                </div>
+                <ul class="list-disc list-outside ml-5 space-y-0.5 mt-0.5 text-justify">
+                    <li>Built and deployed a responsive, component based web application using React and Vite, following reusable and maintainable coding practices.</li>
+                    <li>Implemented client side state management and localStorage based data persistence, ensuring reliable data handling and real time updates without backend dependency.</li>
+                    <li>Used Git and GitHub for version control and maintained the application through iterative development and debugging.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section>
+            <h2 class="section-heading">Technical Skills</h2>
+            <div class="text-[13px] space-y-1">
+                <div><span class="font-bold">Languages:</span> Python, C, C++, SQL</div>
+                <div><span class="font-bold">Libraries:</span> Pandas, NumPy, Matplotlib, Seaborn, Scikit Learn</div>
+                <div><span class="font-bold">Tools:</span> Excel, Power BI, MySQL, Jupyter Notebook, Git, GitHub</div>
+                <div><span class="font-bold">Core Concepts:</span> Data Cleaning, Data Visualization, EDA, Statistical Analysis, Computer Networks, Operating Systems, DBMS, OOP, Data Structures and Algorithms</div>
+            </div>
+        </section>
+
+        <!-- Extracurricular -->
+        <section>
+            <h2 class="section-heading">Extracurricular</h2>
+            <div class="text-[13px]">
+                <div class="flex justify-between items-baseline font-bold">
+                    <div>&bull; Volunteer, Akshargyan</div>
+                    <div class="font-normal italic">Nov 2023 to Present</div>
+                </div>
+                <ul class="list-disc list-outside ml-5 space-y-0.5 mt-0.5 text-justify">
+                    <li>Mentored underprivileged children through structured learning sessions, improving academic engagement and understanding.</li>
+                    <li>Collaborated with volunteers to organize educational initiatives and community events, strengthening teamwork and communication skills.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section>
+            <h2 class="section-heading">Certifications</h2>
+            <ul class="list-disc list-outside ml-5 text-[13px] space-y-0.5">
+                <li>
+                    <a href="https://drive.google.com/file/d/1b8WsWUZVbGEw9UEdA5ojPGW0dCx5q8x5/view?usp=sharing" target="_blank" class="text-blue-900 hover:underline font-semibold">Introduction to MS Excel</a> (Microsoft)
+                </li>
+                <li>
+                    <a href="https://drive.google.com/file/d/1eJejaEsAxf_oc0KlzeXRA6TyQeBp-_Xm/view?usp=sharing" target="_blank" class="text-blue-900 hover:underline font-semibold">The Ultimate Job Ready Data Science Course</a> (CodeWithHarry)
+                </li>
+                <li>
+                    <a href="https://drive.google.com/file/d/10ePtNdq1r-O5qyJ1YXQzkBCqJbh8SdF0/view?usp=drive_link" target="_blank" class="text-blue-900 hover:underline font-semibold">Responsive Web Design</a> (FreeCodeCamp)
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

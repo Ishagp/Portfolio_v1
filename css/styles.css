@@ -1,0 +1,282 @@
+﻿/* ==========================================================================
+   Dark Cyan & Slate Theme - Inspired by Screenshot
+   Palette:
+     - Main Background: #1f242d
+     - Card / Surface: #323946
+     - Electric Cyan Accent: #0ef (rgb(0, 238, 255))
+     - Text Main: #ffffff
+     - Text Muted: #cbd5e1
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+    --bg-main: #1f242d;
+    --bg-second: #323946;
+    --bg-card: #272d38;
+    --cyan-accent: #0ef;
+    --cyan-hover: #00d2df;
+    --cyan-glow: 0 0 18px rgba(0, 238, 255, 0.45);
+    --cyan-glow-strong: 0 0 30px rgba(0, 238, 255, 0.6);
+    --text-white: #ffffff;
+    --text-muted: #94a3b8;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-white);
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-white);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Monospace font */
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #1f242d;
+}
+::-webkit-scrollbar-thumb {
+    background: #323946;
+    border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0ef;
+}
+
+/* Navigation */
+.site-nav {
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background: rgba(31, 36, 45, 0.88);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Theme Cyan Text */
+.text-cyan {
+    color: #0ef;
+}
+
+/* Cyan Glow Buttons */
+.btn-cyan {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.75rem;
+    background-color: #0ef;
+    color: #1f242d;
+    font-size: 0.875rem;
+    font-weight: 700;
+    border-radius: 40px;
+    letter-spacing: 0.02em;
+    box-shadow: 0 0 15px rgba(0, 238, 255, 0.5);
+    transition: all 0.3s ease;
+    border: 2px solid #0ef;
+}
+.btn-cyan:hover {
+    background-color: transparent;
+    color: #0ef;
+    box-shadow: 0 0 25px rgba(0, 238, 255, 0.7);
+    transform: translateY(-2px);
+}
+
+.btn-cyan-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.75rem;
+    background-color: transparent;
+    color: #0ef;
+    font-size: 0.875rem;
+    font-weight: 700;
+    border-radius: 40px;
+    border: 2px solid #0ef;
+    box-shadow: 0 0 10px rgba(0, 238, 255, 0.25);
+    transition: all 0.3s ease;
+}
+.btn-cyan-outline:hover {
+    background-color: #0ef;
+    color: #1f242d;
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Circular Social Icons Matching Screenshot */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid #0ef;
+    color: #0ef;
+    box-shadow: 0 0 10px rgba(0, 238, 255, 0.3);
+    transition: all 0.3s ease;
+}
+.social-icon:hover {
+    background: #0ef;
+    color: #1f242d;
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.8);
+    transform: translateY(-3px);
+}
+
+/* Hero Hexagonal Shape & Backdrop from Screenshot */
+.hexagon-wrapper {
+    position: relative;
+    width: 310px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hexagon-glow {
+    position: absolute;
+    inset: 0;
+    background: #0ef;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    filter: drop-shadow(0 0 25px #0ef);
+    box-shadow: 0 0 40px rgba(0, 238, 255, 0.6);
+}
+.hexagon-inner {
+    position: relative;
+    width: 298px;
+    height: 338px;
+    background: #1f242d;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Ambient Corner Glows matching screenshot */
+.ambient-glow {
+    position: fixed;
+    bottom: -150px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 238, 255, 0.22) 0%, rgba(31, 36, 45, 0) 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+.ambient-glow-left {
+    position: fixed;
+    top: 20%;
+    left: -180px;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(0, 238, 255, 0.12) 0%, rgba(31, 36, 45, 0) 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Theme Cards (#323946 / #272d38) */
+.theme-card {
+    background-color: #323946;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.25rem;
+    transition: all 0.3s ease;
+}
+.theme-card:hover {
+    border-color: #0ef;
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.2);
+    transform: translateY(-4px);
+}
+
+/* Project Filter Card animation */
+.project-card {
+    transition: all 0.3s ease;
+}
+.project-card.hide {
+    display: none;
+    opacity: 0;
+}
+
+/* Floating back to top button */
+#backToTopBtn {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+#backToTopBtn.hidden-btn {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+}
+#backToTopBtn.visible-btn {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* Modals */
+.modal-overlay {
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+.modal-content {
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+}
+.modal-overlay.closed {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.modal-overlay.closed .modal-content {
+    transform: scale(0.96) translateY(10px);
+    opacity: 0;
+}
+.modal-overlay.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.modal-overlay.open .modal-content {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+/* Toast Notifications */
+#toastContainer {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.toast {
+    animation: toastFadeIn 0.3s ease forwards;
+}
+@keyframes toastFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    nav, footer, #backToTopBtn, #toastContainer, .ambient-glow, .ambient-glow-left {
+        display: none !important;
+    }
+}

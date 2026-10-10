@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isha Gupta • AI/ML & Data Driven Developer</title>
+    <meta name="description" content="Portfolio of Isha Gupta, Computer Science (AI/ML) student at JSS Academy of Technical Education, Noida.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS with Dark Mode -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace']
+                    },
+                    colors: {
+                        themebg: '#1f242d',
+                        themecard: '#323946',
+                        themecyan: '#0ef'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#1f242d] text-white min-h-screen relative overflow-x-hidden selection:bg-[#0ef] selection:text-[#1f242d]">
+
+    <!-- Ambient Corner Glows from Screenshot -->
+    <div class="ambient-glow"></div>
+    <div class="ambient-glow-left"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 site-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="text-xl sm:text-2xl font-extrabold tracking-tight text-white hover:text-[#0ef] transition">
+                Isha Gupta<span class="text-[#0ef]">.</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-300">
+                <a href="#hero" class="text-[#0ef] hover:text-[#0ef] transition">Home</a>
+                <a href="#about" class="hover:text-[#0ef] transition">About</a>
+                <a href="#skills" class="hover:text-[#0ef] transition">Skills</a>
+                <a href="#projects" class="hover:text-[#0ef] transition">Projects</a>
+                <a href="#interactive-dashboard" class="hover:text-[#0ef] transition">Demo</a>
+                <a href="#education" class="hover:text-[#0ef] transition">Education</a>
+                <a href="#certifications" class="hover:text-[#0ef] transition">Certifications</a>
+                <a href="#contact" class="hover:text-[#0ef] transition">Contact</a>
+            </div>
+
+            <!-- Header Action Controls -->
+            <div class="flex items-center gap-3">
+                <button onclick="openResumeModal()" class="hidden sm:inline-flex btn-cyan text-xs py-2 px-5">
+                    <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+                    <span>Resume</span>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" aria-label="Open Mobile Menu" class="p-2 rounded-lg md:hidden text-[#0ef] hover:bg-[#323946] transition">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenuDrawer" class="hidden md:hidden border-t border-slate-700 bg-[#1f242d] px-6 py-5 space-y-3 text-sm font-semibold text-slate-300">
+            <a href="#hero" class="block text-[#0ef] p-1">Home</a>
+            <a href="#about" class="block hover:text-[#0ef] p-1">About</a>
+            <a href="#skills" class="block hover:text-[#0ef] p-1">Skills</a>
+            <a href="#projects" class="block hover:text-[#0ef] p-1">Projects</a>
+            <a href="#interactive-dashboard" class="block hover:text-[#0ef] p-1">Live Demo</a>
+            <a href="#education" class="block hover:text-[#0ef] p-1">Education</a>
+            <a href="#certifications" class="block hover:text-[#0ef] p-1">Certifications</a>
+            <a href="#contact" class="block hover:text-[#0ef] p-1">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 space-y-28 relative z-10">
+
+        <!-- ==========================================================================
+             1. HERO / HOME SECTION (MATCHING SCREENSHOT LAYOUT & PALETTE)
+             ========================================================================== -->
+        <section id="hero" class="pt-6 sm:pt-12 flex flex-col lg:flex-row items-center justify-between gap-12">
+            <!-- Left Text Content -->
+            <div class="flex-1 max-w-2xl text-left">
+                <!-- Hello Greeting from Screenshot -->
+                <h3 class="text-xl sm:text-2xl font-bold text-white tracking-wide mb-2">
+                    Hello, It is Me
+                </h3>
+
+                <!-- Name Headline from Screenshot -->
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight mb-3">
+                    Isha Gupta
+                </h1>
+
+                <!-- Role Subtitle from Screenshot -->
+                <h2 class="text-xl sm:text-3xl font-bold text-white mb-5">
+                    And I am a <span class="text-[#0ef] drop-shadow-[0_0_12px_rgba(0,238,255,0.6)]">Data Analyst</span>
+                </h2>
+
+                <!-- Short Bio -->
+                <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-8 max-w-xl">
+                    Computer Science student specializing in Artificial Intelligence and Machine Learning at JSS Academy of Technical Education, Noida (8.58 CGPA). Hands on experience in Python, SQL, machine learning models, exploratory data analysis, and modern analytical dashboards.
+                </p>
+
+                <!-- Circular Social Icons from Screenshot -->
+                <div class="flex items-center gap-4 mb-8">
+                    <a href="https://github.com/Ishagp" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ishagupta25" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="mailto:gisha825@gmail.com" class="social-icon" aria-label="Email">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                    </a>
+                    <a href="tel:+918303088220" class="social-icon" aria-label="Phone">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- CTA Button from Screenshot ("Download CV") -->
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="assets/resume.html" target="_blank" class="btn-cyan">
+                        <span>Download CV</span>
+                    </a>
+                    <a href="#projects" class="btn-cyan-outline">
+                        <span>View Projects</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Visual from Screenshot (Hexagonal Cyan Glowing Graphic) -->
+            <div class="flex-1 flex justify-center lg:justify-end">
+                <div class="hexagon-wrapper">
+                    <!-- Glowing Cyan Polygon Backing -->
+                    <div class="hexagon-glow"></div>
+                    <!-- Inner Hexagon Frame -->
+                    <div class="hexagon-inner p-6 text-center">
+                        <div class="w-20 h-20 rounded-2xl bg-[#323946] border-2 border-[#0ef] shadow-[0_0_15px_#0ef] flex items-center justify-center text-[#0ef] mx-auto mb-4">
+                            <i data-lucide="brain-circuit" class="w-10 h-10"></i>
+                        </div>
+                        <h4 class="text-lg font-extrabold text-white">Isha Gupta</h4>
+                        <p class="text-xs text-[#0ef] font-mono mt-0.5">B.Tech CSE (AIML)</p>
+                        <div class="mt-3 px-3 py-1 rounded-full bg-[#323946] border border-[#0ef]/40 text-[11px] text-white font-mono shadow-[0_0_10px_rgba(0,238,255,0.25)]">
+                            CGPA: 8.58 / 10
+                        </div>
+                        <div class="mt-3 text-[11px] text-slate-300 font-mono">
+                            JSS Academy of Tech Ed
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <div id="heroStatsContainer" class="w-full grid grid-cols-2 md:grid-cols-4 gap-4">
+            <!-- Injected via config.js -->
+        </div>
+        <!-- ==========================================================================
+             2. ABOUT ME SECTION
+             ========================================================================== -->
+        <section id="about" class="scroll-mt-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+                    About <span class="text-[#0ef]">Me</span>
+                </h2>
+                <div class="w-16 h-1 bg-[#0ef] shadow-[0_0_10px_#0ef] mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div id="aboutTextContainer" class="lg:col-span-6 theme-card p-6 sm:p-8">
+                    <p class="text-slate-300 leading-relaxed mb-4 text-sm sm:text-base">
+                        I'm a Computer Science undergraduate specializing in Artificial Intelligence and Machine Learning at JSS Academy of Technical Education, Noida (2023–2027).
+                    </p>
+                    <p class="text-slate-300 leading-relaxed mb-4 text-sm sm:text-base">
+                        My work focuses on data driven engineering—from cleaning raw datasets to building machine learning models and interactive analytical dashboards. I'm passionate about transforming complex data into meaningful insights and developing solutions that solve real world problems.
+                    </p>
+                    <div class="mt-6 pt-6 border-t border-slate-700/60">
+                        <h4 class="text-xs uppercase tracking-wider font-bold text-[#0ef] mb-3">Core Focus Areas</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 text-xs font-medium rounded-full bg-[#1f242d] text-[#0ef] border border-[#0ef]/30 shadow-[0_0_8px_rgba(0,238,255,0.15)]">Machine Learning & Predictive Modeling</span>
+                            <span class="px-3 py-1.5 text-xs font-medium rounded-full bg-[#1f242d] text-[#0ef] border border-[#0ef]/30 shadow-[0_0_8px_rgba(0,238,255,0.15)]">Exploratory Data Analysis (EDA) & Statistical Analysis</span>
+                            <span class="px-3 py-1.5 text-xs font-medium rounded-full bg-[#1f242d] text-[#0ef] border border-[#0ef]/30 shadow-[0_0_8px_rgba(0,238,255,0.15)]">Power BI & Business Intelligence Dashboards</span>
+                            <span class="px-3 py-1.5 text-xs font-medium rounded-full bg-[#1f242d] text-[#0ef] border border-[#0ef]/30 shadow-[0_0_8px_rgba(0,238,255,0.15)]">Relational Database Systems (SQL & RDBMS)</span>
+                            <span class="px-3 py-1.5 text-xs font-medium rounded-full bg-[#1f242d] text-[#0ef] border border-[#0ef]/30 shadow-[0_0_8px_rgba(0,238,255,0.15)]">Component Based Frontend Engineering (React & Vite)</span>
+                            <span class="px-3 py-1.5 text-xs font-medium rounded-full bg-[#1f242d] text-[#0ef] border border-[#0ef]/30 shadow-[0_0_8px_rgba(0,238,255,0.15)]">Data Structures, Algorithms & Object Oriented Programming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 space-y-4">
+                    <h3 class="text-xs uppercase tracking-wider font-bold text-[#0ef] px-1">What I Enjoy Working On</h3>
+                    <div id="whatIEnjoyContainer" class="space-y-4">
+                        <!-- Populated dynamically via config.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             3. SKILLS SECTION
+             ========================================================================== -->
+        <section id="skills" class="scroll-mt-24">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+                    My <span class="text-[#0ef]">Skills</span>
+                </h2>
+                <div class="w-16 h-1 bg-[#0ef] shadow-[0_0_10px_#0ef] mx-auto mt-3 rounded-full"></div>
+                <p class="text-xs sm:text-sm text-slate-300 mt-3 max-w-md mx-auto">
+                    Languages, machine learning libraries, analytics tools, and core computer science concepts.
+                </p>
+            </div>
+
+            <!-- Skill Search Input -->
+            <div class="max-w-md mx-auto mb-10 relative">
+                <i data-lucide="search" class="w-4 h-4 text-[#0ef] absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                <input 
+                    type="text" 
+                    id="skillSearchInput" 
+                    placeholder="Search skills (e.g. Python, SQL, Power BI, React)..."
+                    class="w-full pl-10 pr-4 py-3 rounded-full border border-slate-700 bg-[#323946] text-xs sm:text-sm text-white focus:outline-none focus:border-[#0ef] focus:shadow-[0_0_15px_rgba(0,238,255,0.3)] transition"
+                />
+            </div>
+
+            <!-- Skills Grid -->
+            <div id="skillsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Dynamically populated via config.js -->
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             4. PROJECTS SECTION ⭐
+             ========================================================================== -->
+        <section id="projects" class="scroll-mt-24">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+                    Latest <span class="text-[#0ef]">Projects</span>
+                </h2>
+                <div class="w-16 h-1 bg-[#0ef] shadow-[0_0_10px_#0ef] mx-auto mt-3 rounded-full"></div>
+                <p class="text-xs sm:text-sm text-slate-300 mt-3 max-w-lg mx-auto">
+                    Hands on applications with full source code repositories and live deployments.
+                </p>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-2 mb-10 text-xs font-semibold">
+                <button data-project-filter="all" class="px-5 py-2 rounded-full font-bold transition bg-[#0ef] text-[#1f242d] shadow-[0_0_15px_rgba(0,238,255,0.5)]">
+                    All Projects (3)
+                </button>
+                <button data-project-filter="ml" class="px-5 py-2 rounded-full font-bold transition bg-transparent text-slate-300 border border-[#0ef]/40 hover:bg-[#0ef] hover:text-[#1f242d] hover:shadow-[0_0_15px_rgba(0,238,255,0.4)]">
+                    Machine Learning (1)
+                </button>
+                <button data-project-filter="data" class="px-5 py-2 rounded-full font-bold transition bg-transparent text-slate-300 border border-[#0ef]/40 hover:bg-[#0ef] hover:text-[#1f242d] hover:shadow-[0_0_15px_rgba(0,238,255,0.4)]">
+                    Data & BI (1)
+                </button>
+                <button data-project-filter="web" class="px-5 py-2 rounded-full font-bold transition bg-transparent text-slate-300 border border-[#0ef]/40 hover:bg-[#0ef] hover:text-[#1f242d] hover:shadow-[0_0_15px_rgba(0,238,255,0.4)]">
+                    Web Development (1)
+                </button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamically populated via config.js -->
+            </div>
+        </section>
+        <!-- ==========================================================================
+             INTERACTIVE LIVE DATA DASHBOARD WIDGET
+             ========================================================================== -->
+        <section id="interactive-dashboard" class="scroll-mt-24">
+            <div class="theme-card p-6 sm:p-8">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1f242d] text-[#0ef] border border-[#0ef]/40 text-xs font-bold uppercase tracking-wider mb-2">
+                            <span>Interactive Model Sandbox</span>
+                        </div>
+                        <h3 id="chartTitle" class="text-xl sm:text-2xl font-bold text-white">
+                            Heart Disease Prediction: ROC-AUC Evaluation Curves
+                        </h3>
+                        <p id="chartSubtitle" class="text-xs sm:text-sm text-slate-300 mt-1">
+                            Benchmarking Logistic Regression (0.88 AUC) vs Random Forest (0.94 AUC)
+                        </p>
+                    </div>
+
+                    <!-- Preset Selector Tabs -->
+                    <div class="flex flex-wrap sm:flex-nowrap p-1.5 rounded-full bg-[#1f242d] border border-slate-700 text-xs font-semibold gap-1">
+                        <button data-chart-tab="heart_disease_roc" class="px-4 py-2 rounded-full font-bold transition">
+                            Heart Disease ROC (0.94)
+                        </button>
+                        <button data-chart-tab="airbnb_analytics" class="px-4 py-2 rounded-full font-bold transition">
+                            Airbnb City Analytics
+                        </button>
+                        <button data-chart-tab="habit_tracker_stats" class="px-4 py-2 rounded-full font-bold transition">
+                            Habit Tracker Streaks
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Canvas Wrapper -->
+                <div class="relative w-full h-72 sm:h-96">
+                    <canvas id="interactiveChartCanvas"></canvas>
+                </div>
+
+                <div class="mt-4 pt-4 border-t border-slate-700/60 flex flex-col sm:flex-row sm:items-center justify-between text-xs text-slate-400 gap-2">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="info" class="w-4 h-4 text-[#0ef]"></i>
+                        <span>Select the tabs above to explore visualizations corresponding to each project.</span>
+                    </div>
+                    <span class="font-mono text-[11px] text-[#0ef]">Chart.js Visualization</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             5. EDUCATION SECTION
+             ========================================================================== -->
+        <section id="education" class="scroll-mt-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+                    Education <span class="text-[#0ef]">Journey</span>
+                </h2>
+                <div class="w-16 h-1 bg-[#0ef] shadow-[0_0_10px_#0ef] mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div id="educationTimeline" class="max-w-3xl mx-auto">
+                <!-- Dynamically populated via config.js -->
+            </div>
+
+            <!-- Extracurricular Spotlight -->
+            <div class="max-w-3xl mx-auto mt-8">
+                <div class="theme-card p-6 border-l-4 border-l-[#0ef]">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center gap-2.5">
+                            <i data-lucide="heart-handshake" class="w-5 h-5 text-[#0ef]"></i>
+                            <h3 class="text-base font-bold text-white">Volunteer, Akshargyan</h3>
+                        </div>
+                        <span class="text-xs font-mono px-3 py-1 rounded-full bg-[#1f242d] text-[#0ef] border border-[#0ef]/40">Nov 2023 to Present</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        Mentored underprivileged children through structured learning sessions, improving academic engagement and understanding. Collaborated with volunteers to organize educational initiatives and community events, strengthening teamwork and communication skills.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             6. CERTIFICATIONS SECTION
+             ========================================================================== -->
+        <section id="certifications" class="scroll-mt-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+                    Verified <span class="text-[#0ef]">Certifications</span>
+                </h2>
+                <div class="w-16 h-1 bg-[#0ef] shadow-[0_0_10px_#0ef] mx-auto mt-3 rounded-full"></div>
+                <p class="text-xs sm:text-sm text-slate-300 mt-3 max-w-md mx-auto">
+                    Certifications with direct Google Drive links extracted from resume.
+                </p>
+            </div>
+
+            <div id="certificationsGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <!-- Dynamically populated via config.js -->
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             7. RESUME SECTION
+             ========================================================================== -->
+        <section id="resume" class="scroll-mt-24">
+            <div class="theme-card p-8 sm:p-12 text-center relative overflow-hidden">
+                <div class="max-w-2xl mx-auto">
+                    <div class="w-14 h-14 mx-auto rounded-full bg-[#1f242d] border-2 border-[#0ef] text-[#0ef] shadow-[0_0_20px_#0ef] flex items-center justify-center mb-5">
+                        <i data-lucide="file-check" class="w-7 h-7"></i>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+                        Official <span class="text-[#0ef]">Resume</span>
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-300 mt-2 mb-6">
+                        ATS-formatted resume detailing coursework at JSS Academy of Technical Education (8.58 CGPA), projects, skills, and certifications.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center gap-4">
+                        <button onclick="openResumeModal()" class="btn-cyan">
+                            <i data-lucide="eye" class="w-4 h-4"></i> Preview Resume
+                        </button>
+                        <a href="assets/resume.html" target="_blank" class="btn-cyan-outline">
+                            <i data-lucide="printer" class="w-4 h-4"></i> Open PDF / Print
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             8. CONTACT SECTION
+             ========================================================================== -->
+        <section id="contact" class="scroll-mt-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+                    Contact <span class="text-[#0ef]">Me</span>
+                </h2>
+                <div class="w-16 h-1 bg-[#0ef] shadow-[0_0_10px_#0ef] mx-auto mt-3 rounded-full"></div>
+                <p class="text-xs sm:text-sm text-slate-300 mt-3 max-w-md mx-auto">
+                    Open to internship opportunities, software engineering roles, or collaborations.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Direct Contact Details -->
+                <div class="lg:col-span-5 space-y-4">
+                    <!-- Email Card -->
+                    <div class="theme-card p-5 flex items-center gap-4 cursor-pointer hover:border-[#0ef] transition" onclick="copyEmailToClipboard()">
+                        <div class="w-11 h-11 rounded-full bg-[#1f242d] border border-[#0ef] text-[#0ef] flex items-center justify-center shrink-0 shadow-[0_0_10px_rgba(0,238,255,0.3)]">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-xs text-slate-400 uppercase font-bold font-mono">Email</div>
+                            <div class="text-sm font-bold text-white truncate">gisha825@gmail.com</div>
+                            <div class="text-[11px] text-[#0ef] mt-0.5">Click to copy</div>
+                        </div>
+                    </div>
+
+                    <!-- Phone Card -->
+                    <a href="tel:+918303088220" class="theme-card p-5 flex items-center gap-4 block hover:border-[#0ef] transition">
+                        <div class="w-11 h-11 rounded-full bg-[#1f242d] border border-[#0ef] text-[#0ef] flex items-center justify-center shrink-0 shadow-[0_0_10px_rgba(0,238,255,0.3)]">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400 uppercase font-bold font-mono">Phone</div>
+                            <div class="text-sm font-bold text-white">+91 8303088220</div>
+                            <div class="text-[11px] text-[#0ef] mt-0.5">Click to call</div>
+                        </div>
+                    </a>
+
+                    <!-- LinkedIn Card -->
+                    <a href="https://www.linkedin.com/in/ishagupta25" target="_blank" rel="noopener" class="theme-card p-5 flex items-center gap-4 block hover:border-[#0ef] transition">
+                        <div class="w-11 h-11 rounded-full bg-[#1f242d] border border-[#0ef] text-[#0ef] flex items-center justify-center shrink-0 shadow-[0_0_10px_rgba(0,238,255,0.3)]">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400 uppercase font-bold font-mono">LinkedIn</div>
+                            <div class="text-sm font-bold text-white">linkedin.com/in/ishagupta25</div>
+                            <div class="text-[11px] text-slate-400 mt-0.5">Connect professionally</div>
+                        </div>
+                    </a>
+
+                    <!-- GitHub Card -->
+                    <a href="https://github.com/Ishagp" target="_blank" rel="noopener" class="theme-card p-5 flex items-center gap-4 block hover:border-[#0ef] transition">
+                        <div class="w-11 h-11 rounded-full bg-[#1f242d] border border-[#0ef] text-[#0ef] flex items-center justify-center shrink-0 shadow-[0_0_10px_rgba(0,238,255,0.3)]">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400 uppercase font-bold font-mono">GitHub</div>
+                            <div class="text-sm font-bold text-white">github.com/Ishagp</div>
+                            <div class="text-[11px] text-slate-400 mt-0.5">View repositories</div>
+                        </div>
+                    </a>
+
+                    <!-- Location Card -->
+                    <div class="theme-card p-5 flex items-center gap-4">
+                        <div class="w-11 h-11 rounded-full bg-[#1f242d] border border-[#0ef] text-[#0ef] flex items-center justify-center shrink-0 shadow-[0_0_10px_rgba(0,238,255,0.3)]">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400 uppercase font-bold font-mono">Location</div>
+                            <div class="text-sm font-bold text-white">Noida, India</div>
+                            <div class="text-[11px] text-[#0ef] mt-0.5">Open to Relocation & Remote</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Message Form -->
+                <div class="lg:col-span-7 theme-card p-6 sm:p-8">
+                    <h3 class="text-lg font-bold text-white mb-5">Send a Message</h3>
+                    <form id="portfolioContactForm" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="senderName">Your Name</label>
+                                <input type="text" id="senderName" required placeholder="Your name" class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-[#1f242d] text-xs sm:text-sm text-white focus:outline-none focus:border-[#0ef] focus:shadow-[0_0_10px_rgba(0,238,255,0.3)] transition" />
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="senderEmail">Your Email</label>
+                                <input type="email" id="senderEmail" required placeholder="your.email@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-[#1f242d] text-xs sm:text-sm text-white focus:outline-none focus:border-[#0ef] focus:shadow-[0_0_10px_rgba(0,238,255,0.3)] transition" />
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="senderMessage">Message</label>
+                            <textarea id="senderMessage" rows="4" required placeholder="Hi Isha, I would like to connect regarding an opportunity..." class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-[#1f242d] text-xs sm:text-sm text-white focus:outline-none focus:border-[#0ef] focus:shadow-[0_0_10px_rgba(0,238,255,0.3)] transition"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 rounded-full btn-cyan text-xs sm:text-sm flex items-center justify-center gap-2">
+                            <i data-lucide="send" class="w-4 h-4"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-24 border-t border-slate-700/60 bg-[#191c24] py-8 text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                Isha Gupta • B.Tech Computer Science (AIML) • JSS Academy of Technical Education
+            </div>
+            <div class="flex items-center gap-5">
+                <a href="#hero" class="hover:text-[#0ef] transition">Home</a>
+                <a href="assets/resume.html" target="_blank" class="hover:text-[#0ef] transition">Resume</a>
+                <a href="https://github.com/Ishagp" target="_blank" class="hover:text-[#0ef] transition">GitHub</a>
+                <a href="https://www.linkedin.com/in/ishagupta25" target="_blank" class="hover:text-[#0ef] transition">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Back to Top Button -->
+    <button id="backToTopBtn" aria-label="Back to Top" class="hidden-btn fixed bottom-6 left-6 z-40 p-3 rounded-full bg-[#323946] border border-[#0ef] text-[#0ef] shadow-[0_0_15px_#0ef] hover:bg-[#0ef] hover:text-[#1f242d] transition">
+        <i data-lucide="arrow-up" class="w-4 h-4"></i>
+    </button>
+
+    <!-- Toast Notifications Container -->
+    <div id="toastContainer"></div>
+
+    <!-- Case Study Detail Modal -->
+    <div id="caseStudyModal" class="modal-overlay closed fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+        <div class="modal-content theme-card max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative border-2 border-[#0ef]">
+            <button onclick="closeAllModals()" class="absolute top-5 right-5 p-2 rounded-full border border-[#0ef] text-[#0ef] hover:bg-[#0ef] hover:text-[#1f242d] transition">
+                <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+            <div class="mb-4">
+                <div id="caseStudyCategory" class="text-xs font-mono font-bold tracking-wider text-[#0ef] mb-1"></div>
+                <h3 id="caseStudyTitle" class="text-xl font-bold text-white"></h3>
+            </div>
+            <div id="caseStudyContent"></div>
+        </div>
+    </div>
+
+    <!-- Resume Viewer Modal -->
+    <div id="resumeModal" class="modal-overlay closed fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-sm">
+        <div class="modal-content theme-card max-w-4xl w-full h-[90vh] flex flex-col shadow-2xl overflow-hidden border-2 border-[#0ef]">
+            <div class="px-6 py-4 border-b border-slate-700 flex items-center justify-between bg-[#1f242d]">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="file-text" class="w-5 h-5 text-[#0ef]"></i>
+                    <h3 class="text-sm sm:text-base font-bold text-white">Isha Gupta • Resume</h3>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="assets/resume.html" target="_blank" class="px-4 py-1.5 rounded-full bg-[#0ef] text-[#1f242d] text-xs font-bold flex items-center gap-1.5 shadow-[0_0_10px_rgba(0,238,255,0.5)] hover:shadow-[0_0_20px_rgba(0,238,255,0.8)] transition">
+                        <i data-lucide="printer" class="w-3.5 h-3.5"></i> Print / PDF
+                    </a>
+                    <button onclick="closeAllModals()" class="p-1.5 rounded-full border border-slate-600 text-slate-300 hover:text-white hover:border-[#0ef] transition">
+                        <i data-lucide="x" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+            <iframe src="assets/resume.html" class="w-full flex-1 border-0 bg-white"></iframe>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
